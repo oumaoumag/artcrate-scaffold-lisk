@@ -76,10 +76,8 @@ Built with React + ethers.js:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/oumaoumag/
-artcrate-scaffold-lisk .git
-cd 
-artcrate-scaffold-lisk 
+git clone https://github.com/oumaoumag/artcrate-scaffold-lisk.git
+cd artcrate-scaffold-lisk 
 ```
 
 ### Install Dependencies
@@ -89,11 +87,12 @@ artcrate-scaffold-lisk
 cd contracts
 forge install
 
-# Compile & deploy contracts (using Foundry)
-forge build
-forge script scripts/deploy.js --rpc-url liskSepolia
+# Compile & deploy contracts (using Hardhat)
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network liskSepolia
+# Ensure your Hardhat configuration is set up for the Lisk Sepolia network
 
-# Install frontend
+# Install frontend dependencies
 cd ../frontend
 yarn install
 ```
