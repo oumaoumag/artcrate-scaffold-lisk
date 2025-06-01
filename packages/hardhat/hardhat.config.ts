@@ -132,7 +132,8 @@ const config: HardhatUserConfig = {
     },
     liskSepolia: {
       url: "https://rpc.sepolia-api.lisk.com",
-      accounts: [deployerPrivateKey],
+      accounts: [process.env.PRIVATE_KEY || ""],
+      chainId: 4202,
     },
     mode: {
       url: "https://mainnet.mode.network",
